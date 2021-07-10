@@ -10,10 +10,10 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import Home from '../screens/Home'
+import Home from '../screens/Home';
 
-const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
 
 
  const App = () => {

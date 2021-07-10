@@ -12,8 +12,8 @@ import {
   Alert
 } from 'react-native';
 
-const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
 
 
 export default class Home extends React.Component {
@@ -23,7 +23,7 @@ export default class Home extends React.Component {
       "Hola",
       "Ya te encuentras ahí",
       [
-        { text: "OK", onPress: () => console.log("OK Pressed") }
+        { text: "OK", onPress: () => console.log("OK from Home pressed!") }
       ]
     );
   }
@@ -34,20 +34,20 @@ export default class Home extends React.Component {
     <SafeAreaView style={{flex:1}}>
       <ImageBackground
         style={{height}}
-        source={require('../assets/images/fondo6.jpg')}
+        source={require('../assets/images/fondo2.jpg')}
       >
         <View style={{flexDirection:'column', height, justifyContent:'center'}}>
           <View style={{flexDirection:'row'}}>   
             <TouchableOpacity 
               onPress={()=>this._onHomePress()}
-              style={[styles.button, { backgroundColor:'rgba(60, 179, 113, 0.5)' }]}
+              style={[styles.button, { backgroundColor:'rgba(20, 32, 255, 0.60)' }]}
             >
               <Text style={styles.text}>
                 Principal
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(238, 0, 238, 0.5)' }]}>
+            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(20, 255, 110, 0.60)' }]}>
               <Text style={styles.text}>
                 Perfil
               </Text>
@@ -55,13 +55,13 @@ export default class Home extends React.Component {
           </View>
 
           <View style={{flexDirection:'row', }}>
-            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(255, 165, 0, 0.5)' }]}>
+            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(255, 32, 20, 0.60)' }]}>
               <Text style={styles.text}>
                 Posteos
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(0, 165, 188, 0.8)' }]}>
+            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(0, 142, 170, 0.60)' }]}>
               <Text style={styles.text}>
                 Mapa
               </Text>
