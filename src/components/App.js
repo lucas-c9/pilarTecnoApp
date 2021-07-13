@@ -10,16 +10,19 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import Home from '../screens/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import AppStack from '../routes/AppStack';
 
-const height = Dimensions.get('window').height;
-const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 
  const App = () => {
 
     return( 
-        <Home />
+       <NavigationContainer>
+         <AppStack />
+       </NavigationContainer>
     )
 }
 
