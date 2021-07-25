@@ -18,10 +18,10 @@ const width = Dimensions.get('window').width;
 
 export default class Home extends React.Component {
 
-  _onHomePress = () => {
+  onHomePress = () => {
     Alert.alert(
-      "Hola",
-      "Ya te encuentras ahí",
+      "Hi",
+      "You're already in home",
       [
         { text: "OK", onPress: () => console.log("OK from Home pressed!") }
       ]
@@ -39,7 +39,7 @@ export default class Home extends React.Component {
         <View style={{flexDirection:'column', height, justifyContent:'center'}}>
           <View style={{flexDirection:'row'}}>   
             <TouchableOpacity 
-              onPress={()=>this._onHomePress()}
+              onPress={()=>this.onHomePress()}
               style={[styles.button, { backgroundColor:'rgba(20, 32, 255, 0.60)' }]}
             >
               <Text style={styles.text}>
@@ -47,23 +47,29 @@ export default class Home extends React.Component {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(20, 255, 110, 0.60)' }]}>
+            <TouchableOpacity 
+              onPress={() => this.props.navigation.navigate('Profile')}
+              style={[styles.button, { backgroundColor:'rgba(20, 255, 110, 0.60)' }]}>
               <Text style={styles.text}>
-                Perfil
+                Profile
               </Text>
             </TouchableOpacity>
           </View>
 
           <View style={{flexDirection:'row', }}>
-            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(255, 32, 20, 0.60)' }]}>
+            <TouchableOpacity 
+              onPress={() => this.props.navigation.navigate('Posts')}
+              style={[styles.button, { backgroundColor:'rgba(255, 32, 20, 0.60)' }]}>
               <Text style={styles.text}>
-                Posteos
+                Posts
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.button, { backgroundColor:'rgba(0, 142, 170, 0.60)' }]}>
+            <TouchableOpacity 
+              onPress={() => this.props.navigation.navigate('Map')}
+              style={[styles.button, { backgroundColor:'rgba(0, 142, 170, 0.60)' }]}>
               <Text style={styles.text}>
-                Mapa
+                Map
               </Text>
             </TouchableOpacity>
           </View>
