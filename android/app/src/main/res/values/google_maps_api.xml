@@ -1,0 +1,4 @@
+<!--  crear este archivo para mapa -->
+<resources>
+  <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCTFDNpf_zQ3snPtQURDSXNROiGE6X0488</string>
+</resources>
